@@ -1,5 +1,41 @@
 @import 'basics.less';
 
 .app {
-
+  font-family: verdana;
+  .form_container {
+    margin: 0 0 20px 0;
+    .input_container {
+      display: inline-block;
+      margin: 0 2px 10px 2px;
+      input {
+        font-family: verdana;
+        font-size: 20px;
+        padding: 10px 15px;
+      }
+    }
+    .submit_container {
+      button {
+        background-color: #ccc;
+        border: 0;
+        cursor: pointer;
+        outline: none;
+        padding: 10px 15px;
+        &:disabled {
+          cursor: default;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .result_container {
+    .counter_container {
+      margin: 0 0 20px 0;
+      .counter_value {
+        color: #000;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+      }
+    }
+  }
 }
