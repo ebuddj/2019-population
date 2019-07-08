@@ -55,14 +55,17 @@ class App extends Component {
   checkReady() {
     if (this.state.date.day !== 0 && this.state.date.month !== 0 && this.state.date.year !== 0) {
       this.setState((state, props) => ({
-        ready:true
+        status:{
+          clicked:state.status.clicked,
+          ready:true
+        }
       }));
     }
     else {
       this.setState((state, props) => ({
         status:{
-          clicked:false,
-          ready:true
+          clicked:state.status.clicked,
+          ready:false
         }
       }));
     }
@@ -131,7 +134,7 @@ class App extends Component {
           <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} placeholder={1} min={1} max={31} /></div>
           <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} placeholder={1} min={1} max={12} /></div>
           <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="year" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} placeholder={1970} min={1} max={2019} /></div>
-          <div className={style.submit_container}><button onClick={this.onClick.bind(this)} disabled={this.state.ready === true ? '' : 'disabled'}>Go!</button></div>
+          <div className={style.submit_container}><button onClick={this.onClick.bind(this)} disabled={this.state.status.ready === true ? '' : 'disabled'}>Go!</button></div>
         </div>
         {(this.state.status.clicked) && <Result end={this.state.counter.end} start={this.state.counter.start} />}
         <div className={style.meta_container}>Source: <a href="https://ourworldindata.org/world-population-growth">Our World In Data</a> (0–1950), <a href="https://population.un.org/wpp/Download/Standard/Population/">United Nations</a> (1950–2020)</div>
