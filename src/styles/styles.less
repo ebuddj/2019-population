@@ -18,16 +18,20 @@
         background-color: #ccc;
         border: 0;
         cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
         outline: none;
         padding: 10px 15px;
         &:disabled {
           cursor: default;
+          font-weight: 400;
           opacity: 0.5;
         }
       }
     }
   }
   .result_container {
+    margin: 0 0 20px 0;
     .counter_container {
       margin: 0 0 20px 0;
       .counter_value {
@@ -37,5 +41,9 @@
         line-height: 40px;
       }
     }
+  }
+  .meta_container {
+    font-size: 12px;
+    margin: 0 0 20px 0;
   }
 }

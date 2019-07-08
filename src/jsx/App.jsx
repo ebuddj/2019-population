@@ -134,6 +134,7 @@ class App extends Component {
           <div className={style.submit_container}><button onClick={this.onClick.bind(this)} disabled={this.state.ready === true ? '' : 'disabled'}>Go!</button></div>
         </div>
         {(this.state.status.clicked) && <Result end={this.state.counter.end} start={this.state.counter.start} />}
+        <div className={style.meta_container}>Source: <a href="https://ourworldindata.org/world-population-growth">Our World In Data</a> (0–1950), <a href="https://population.un.org/wpp/Download/Standard/Population/">United Nations</a> (1950–2020)</div>
       </div>
     );
   }
