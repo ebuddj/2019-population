@@ -4,6 +4,11 @@ import style from './../styles/styles.less';
 //  https://github.com/glennreyes/react-countup
 import CountUp from 'react-countup';
 
+// http://recharts.org/en-US
+import {
+  CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis
+} from 'recharts';
+
 class Result extends Component {
   constructor() {
     super();
@@ -32,6 +37,21 @@ class Result extends Component {
           )}
         </CountUp>
         <div>At the end of the year 2020 there will be 7,794,798,739 of us.</div>
+        <div className={style.chart_container}>
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={this.props.data}>
+              <XAxis dataKey="year" interval={149}/>
+               <Tooltip formatter={(value, name, props) => {
+                  return ['World population ' + value.toLocaleString()];
+                }} 
+                labelFormatter={(value, name, props) => {
+                  return ['Year ' + value]
+                }}/>
+              <CartesianGrid stroke="#ccc" strokeDasharray="1 1"/>
+              <Line type="monotone" dataKey="population" stroke="#000" dot={false} activeDot={false} isAnimationActive={false}/>
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     )
   }
