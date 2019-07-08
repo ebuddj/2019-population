@@ -67,6 +67,17 @@ class App extends Component {
       }));
     }
   }
+  onChange(event) {
+    let date = {
+      day:parseInt(this.state.date.day),
+      month:parseInt(this.state.date.month),
+      year:parseInt(this.state.date.year)
+    }
+    date[event.target.name] = parseInt(event.target.value);
+    this.setState((state, props) => ({
+      date:date
+    }));
+  }
   onBlur(event) {
     let date = {
       day:parseInt(this.state.date.day),
@@ -77,9 +88,9 @@ class App extends Component {
       event.target.value = parseInt(event.target.max)
     }
     else if (parseInt(event.target.value) < parseInt(event.target.min)) {
-      event.target.value = parseInt(event.target.min)
+      event.target.value = 0;
     }
-    date[event.target.name] = parseInt(event.target.value)
+    date[event.target.name] = parseInt(event.target.value);
     this.setState((state, props) => ({
       date:date
     }), this.checkReady);
@@ -111,9 +122,9 @@ class App extends Component {
       <div className={style.app}>
         <h3>How many people were there on your date of birth</h3>
         <div className={style.form_container}>
-          <div className={style.input_container}><input onChange={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} placeholder={1} min={1} max={31} /></div>
-          <div className={style.input_container}><input onChange={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} placeholder={1} min={1} max={12} /></div>
-          <div className={style.input_container}><input onChange={this.onBlur.bind(this)} type="text" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} placeholder={1970} min={50} max={2019} /></div>
+          <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} placeholder={1} min={1} max={31} /></div>
+          <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} placeholder={1} min={1} max={12} /></div>
+          <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="text" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} placeholder={1970} min={50} max={2019} /></div>
           <div className={style.submit_container}><button onClick={this.onClick.bind(this)} disabled={this.state.ready === true ? '' : 'disabled'}>Go!</button></div>
         </div>
         {(this.state.status.clicked) && <Result end={this.state.counter.end} start={this.state.counter.start} />}
