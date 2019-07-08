@@ -47,12 +47,18 @@
   background-color: #ccc;
   border: 0;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
   outline: none;
   padding: 10px 15px;
 }
 .app___2khK2 .form_container___2VrX9 .submit_container___3WQjf button:disabled {
   cursor: default;
+  font-weight: 400;
   opacity: 0.5;
+}
+.app___2khK2 .result_container___2Lb1p {
+  margin: 0 0 20px 0;
 }
 .app___2khK2 .result_container___2Lb1p .counter_container___3ZCDj {
   margin: 0 0 20px 0;
@@ -62,5 +68,9 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+}
+.app___2khK2 .meta_container___3p0xG {
+  font-size: 12px;
+  margin: 0 0 20px 0;
 }
 
