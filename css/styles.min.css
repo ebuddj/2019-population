@@ -28,4 +28,39 @@
 .nowrap___2n1o8 {
   white-space: nowrap;
 }
+.app___2khK2 {
+  font-family: verdana;
+}
+.app___2khK2 .form_container___2VrX9 {
+  margin: 0 0 20px 0;
+}
+.app___2khK2 .form_container___2VrX9 .input_container___VsME6 {
+  display: inline-block;
+  margin: 0 2px 10px 2px;
+}
+.app___2khK2 .form_container___2VrX9 .input_container___VsME6 input {
+  font-family: verdana;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+.app___2khK2 .form_container___2VrX9 .submit_container___3WQjf button {
+  background-color: #ccc;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 15px;
+}
+.app___2khK2 .form_container___2VrX9 .submit_container___3WQjf button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.app___2khK2 .result_container___2Lb1p .counter_container___3ZCDj {
+  margin: 0 0 20px 0;
+}
+.app___2khK2 .result_container___2Lb1p .counter_container___3ZCDj .counter_value___1T54z {
+  color: #000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
 
