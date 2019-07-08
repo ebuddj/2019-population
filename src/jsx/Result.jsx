@@ -36,7 +36,7 @@ class Result extends Component {
             </div>
           )}
         </CountUp>
-        <div>At the end of the year 2020 there will be 7,794,798,739 of us.</div>
+        <p>At the end of the year 2020 there will be 7,794,798,739 of us.</p>
         <div className={style.chart_container}>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={this.props.data}>
