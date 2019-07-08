@@ -31,6 +31,7 @@ class Result extends Component {
             </div>
           )}
         </CountUp>
+        <div>At the end of this year 2020 there will be 7,794,798,739 of us.</div>
       </div>
     )
   }
