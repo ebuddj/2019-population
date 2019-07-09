@@ -73,7 +73,19 @@ class App extends Component {
       month:parseInt(this.state.date.month),
       year:parseInt(this.state.date.year)
     };
-    if (event.target.value === '') {
+    if (parseInt(event.target.value) === parseInt(event.target.min)) {
+      event.target.value = parseInt(event.target.max) - 1;
+    }
+    else if (parseInt(event.target.value) < parseInt(event.target.min)) {
+      event.target.value = parseInt(event.target.min) + 1
+    }
+    else if (parseInt(event.target.value) === parseInt(event.target.max)) {
+      event.target.value = parseInt(event.target.min) + 1;
+    }
+    else if (parseInt(event.target.value) > parseInt(event.target.max)) {
+      event.target.value = parseInt(event.target.max) - 1;
+    }
+    else if (event.target.value === '') {
       event.target.value = 0;
     }
     date[event.target.name] = parseInt(event.target.value);
@@ -88,10 +100,10 @@ class App extends Component {
       year:parseInt(this.state.date.year)
     };
     if (parseInt(event.target.value) > parseInt(event.target.max)) {
-      event.target.value = parseInt(event.target.max)
+      event.target.value = parseInt(event.target.max) - 1;
     }
     else if (parseInt(event.target.value) < parseInt(event.target.min)) {
-      event.target.value = 0;
+      event.target.value = parseInt(event.target.min) + 1;
     }
     else if (event.target.value === '') {
       event.target.value = 0;
@@ -129,19 +141,20 @@ class App extends Component {
         <h3>How many people were alive in the world on the day of your birth?</h3>
         <div className={style.form_container}>
           <div className={style.input_container}>
-            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} className={style.day_input} placeholder={1} min={1} max={31} />
+            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} className={style.day_input} placeholder={1} min={0} max={32} />
             <div className={style.label}>day</div>
           </div>
           <div className={style.input_container}>
-            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} className={style.month_input} placeholder={1} min={1} max={12} />
+            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} className={style.month_input} placeholder={1} min={0} max={13} />
             <div className={style.label}>month</div>
           </div>
-
           <div className={style.input_container}>
-            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="year" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} className={style.year_input} placeholder={1970} min={1} max={2019} />
+            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} className={style.year_input} placeholder={1970} min={0} max={2020} />
             <div className={style.label}>year</div>
           </div>
-          <div className={style.submit_container}><button onClick={this.onClick.bind(this)} disabled={this.state.status.ready === true ? '' : 'disabled'}>Go!</button></div>
+          <div className={style.submit_container}>
+            <button onClick={this.onClick.bind(this)} disabled={this.state.status.ready === true ? '' : 'disabled'}>Go!</button>
+          </div>
         </div>
         {(this.state.status.clicked) && <Result end={this.state.counter.end} start={this.state.counter.start} data={this.state.data} />}
         <div className={style.meta_container}>Source: <a href="https://ourworldindata.org/world-population-growth" target="_blank">Our World In Data</a> (0–1950), <a href="https://population.un.org/wpp/Download/Standard/Population/" target="_blank">United Nations</a> (1950–2020)</div>
