@@ -16,6 +16,7 @@ class Result extends Component {
   render() {
     return (
       <div className={style.result_container}>
+        <h4>You were roughly number</h4>
         <CountUp
           decimal='.'
           decimals={0}
@@ -36,6 +37,7 @@ class Result extends Component {
             </div>
           )}
         </CountUp>
+        <h4>when you were born.</h4>
         <p>At the end of the year 2020 there will be 7,794,798,739 of us.</p>
         <div className={style.chart_container}>
           <ResponsiveContainer width="100%" height={300}>

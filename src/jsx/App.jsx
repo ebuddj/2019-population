@@ -126,11 +126,21 @@ class App extends Component {
   render() {
     return (
       <div className={style.app}>
-        <h3>How many people were there in the world on the day of your birth</h3>
+        <h3>How many people were alive in the world on the day of your birth?</h3>
         <div className={style.form_container}>
-          <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} placeholder={1} min={1} max={31} /></div>
-          <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} placeholder={1} min={1} max={12} /></div>
-          <div className={style.input_container}><input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="year" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} placeholder={1970} min={1} max={2019} /></div>
+          <div className={style.input_container}>
+            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="day" value={(this.state.date.day !== 0) ? this.state.date.day : ''} className={style.day_input} placeholder={1} min={1} max={31} />
+            <div className={style.label}>day</div>
+          </div>
+          <div className={style.input_container}>
+            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="number" name="month" value={(this.state.date.month !== 0) ? this.state.date.month : ''} className={style.month_input} placeholder={1} min={1} max={12} />
+            <div className={style.label}>month</div>
+          </div>
+
+          <div className={style.input_container}>
+            <input onChange={this.onChange.bind(this)} onBlur={this.onBlur.bind(this)} type="year" name="year" value={(this.state.date.year !== 0) ? this.state.date.year : ''} className={style.year_input} placeholder={1970} min={1} max={2019} />
+            <div className={style.label}>year</div>
+          </div>
           <div className={style.submit_container}><button onClick={this.onClick.bind(this)} disabled={this.state.status.ready === true ? '' : 'disabled'}>Go!</button></div>
         </div>
         {(this.state.status.clicked) && <Result end={this.state.counter.end} start={this.state.counter.start} data={this.state.data} />}
