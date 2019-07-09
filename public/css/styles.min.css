@@ -31,17 +31,55 @@
 .app___2khK2 {
   font-family: verdana;
 }
+.app___2khK2 h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+.app___2khK2 p {
+  margin: 0 0 20px 0;
+}
 .app___2khK2 .form_container___2VrX9 {
   margin: 0 0 20px 0;
 }
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 {
   display: inline-block;
-  margin: 0 2px 10px 2px;
+  margin: 0 4px 0 4px;
 }
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
   font-family: verdana;
   font-size: 20px;
-  padding: 10px 15px;
+  font-weight: 400;
+  height: 40px;
+  margin: 0 0 3px 0;
+  padding: 0;
+  text-align: center;
+}
+.app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.month_input___9K14J,
+.app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.day_input___2z-Er {
+  width: 80px;
+}
+@media all and (max-width: 450px) {
+  .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.month_input___9K14J,
+  .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.day_input___2z-Er {
+    width: 100%;
+  }
+}
+.app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.year_input___J0pdH {
+  width: 150px;
+}
+@media all and (max-width: 450px) {
+  .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.year_input___J0pdH {
+    width: 100%;
+  }
+}
+.app___2khK2 .form_container___2VrX9 .input_container___VsME6 .label___2-olX {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-align: center;
 }
 .app___2khK2 .form_container___2VrX9 .submit_container___3WQjf button {
   background-color: #ccc;
@@ -57,7 +95,9 @@
   font-weight: 400;
   opacity: 0.5;
 }
-.app___2khK2 .result_container___2Lb1p p {
+.app___2khK2 .result_container___2Lb1p h4 {
+  font-size: 20px;
+  font-weight: 600;
   margin: 0 0 20px 0;
 }
 .app___2khK2 .result_container___2Lb1p .counter_container___3ZCDj {
@@ -69,7 +109,7 @@
   font-weight: 700;
   line-height: 40px;
 }
-.app___2khK2 .chart_container___3Jzlm {
+.app___2khK2 .result_container___2Lb1p .chart_container___3Jzlm {
   margin: 0 0 20px 0;
   max-width: 600px;
 }
