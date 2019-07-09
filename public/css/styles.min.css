@@ -32,11 +32,12 @@
   font-family: verdana;
 }
 .app___2khK2 h3 {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
   margin: 0 0 20px 0;
 }
 .app___2khK2 p {
+  font-size: 16px;
   margin: 0 0 20px 0;
 }
 .app___2khK2 .form_container___2VrX9 {
@@ -51,8 +52,8 @@
   box-sizing: border-box;
   display: inline-block;
   font-family: verdana;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 700;
   height: 40px;
   margin: 0 0 3px 0;
   padding: 0;
@@ -77,16 +78,17 @@
   }
 }
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 .label___2-olX {
+  font-size: 12px;
   margin: 0 0 10px 0;
-  font-size: 14px;
   text-align: center;
 }
 .app___2khK2 .form_container___2VrX9 .submit_container___3WQjf button {
   background-color: #ccc;
   border: 0;
   cursor: pointer;
+  font-family: verdana;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   outline: none;
   padding: 10px 15px;
 }
@@ -119,5 +121,9 @@
 }
 .app___2khK2 .meta_container___3p0xG a {
   color: #000;
+  text-decoration: underline;
+}
+.app___2khK2 .meta_container___3p0xG a:hover {
+  text-decoration: none;
 }
 
