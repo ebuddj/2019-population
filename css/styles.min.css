@@ -44,8 +44,13 @@
   margin: 0 0 20px 0;
 }
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 {
-  display: inline-block;
   margin: 0 4px 0 4px;
+  vertical-align: top;
+}
+@media all and (min-width: 450px) {
+  .app___2khK2 .form_container___2VrX9 .input_container___VsME6 {
+    display: inline-block;
+  }
 }
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input {
   border: 1px solid #ccc;
@@ -56,8 +61,13 @@
   font-weight: 700;
   height: 40px;
   margin: 0 0 3px 0;
-  padding: 0;
+  padding: 0 0 0 15px;
   text-align: center;
+}
+@media all and (max-width: 450px) {
+  .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input {
+    padding: 0;
+  }
 }
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.month_input___9K14J,
 .app___2khK2 .form_container___2VrX9 .input_container___VsME6 input.day_input___2z-Er {
@@ -107,9 +117,14 @@
 }
 .app___2khK2 .result_container___2Lb1p .counter_container___3ZCDj .counter_value___1T54z {
   color: #000;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   line-height: 40px;
+}
+@media all and (max-width: 450px) {
+  .app___2khK2 .result_container___2Lb1p .counter_container___3ZCDj .counter_value___1T54z {
+    font-size: 33px;
+  }
 }
 .app___2khK2 .result_container___2Lb1p .chart_container___3Jzlm {
   margin: 0 0 20px 0;
