@@ -6,7 +6,9 @@
 
 In April 2019 it was estimated that world population have reached 7.7 billion people and as of 19 October 2019, the world population is 7,738,146,000. It took over 200,000 years of human history for the world's population to reach one billion and only 200 years more to reach seven billion.
 
-The population growth has been rapid in the 20th century. World population calculator shows the growth in a personal way.
+The population growth has been rapid in the 20th century. World population calculator shows the growth in a personal way. 
+
+Users are able to enter their own date of birth to the calculater and see how many people there was on earth when they were born. Showing the population growth in this way makes in more striking to the user. For many users the population on earth has doubled during their lifetime.
 
 **Sources**
 * [Our World in Data](https://ourworldindata.org/world-population-growth)
