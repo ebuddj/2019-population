@@ -2,7 +2,7 @@
 
 **Live demo** https://ebuddj.github.io/2019-population/
 
-## World population calculator
+## World Population Calculator (EBU)
 
 In April 2019 it was estimated that world population have reached 7.7 billion people and as of 19 October 2019, the world population is 7,738,146,000. It took over 200,000 years of human history for the world's population to reach one billion and only 200 years more to reach seven billion.
 
