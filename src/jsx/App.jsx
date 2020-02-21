@@ -46,9 +46,6 @@ class App extends Component {
   componentWillUnMount() {
 
   }
-  componentWillReceiveProps(props) {
-
-  }
   checkReady() {
     if (this.state.date.day !== 0 && this.state.date.month !== 0 && this.state.date.year !== 0) {
       this.setState((state, props) => ({
