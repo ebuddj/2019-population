@@ -33,7 +33,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "react-countup": "^4.3.3",
-    "recharts": "^1.8.5",
+    "recharts": "^2.1.14",
     "underscore": "^1.12.1"
   }
 }
